@@ -1,9 +1,10 @@
 import uvicorn
-
 from fastapi import FastAPI
 
+from src.core import get_settings
 
-app = FastAPI()
+
+app = FastAPI(title=get_settings().PROJECT_TITLE)
 
 
 if __name__ == '__main__':

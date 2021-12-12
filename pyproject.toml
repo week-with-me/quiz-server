@@ -12,6 +12,7 @@ uvicorn = "^0.15.0"
 SQLAlchemy = "^1.4.26"
 alembic = "^1.7.4"
 python-dotenv = "^0.19.1"
+asyncpg = "^0.25.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
