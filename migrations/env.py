@@ -4,7 +4,7 @@ from alembic import context
 from src.core import get_settings
 from src.database import Base, engine
 
-from src.model import Movie
+from src.model import MovieDirector, Director, Movie
 
 config = context.config
 fileConfig(config.config_file_name)

@@ -1,6 +1,6 @@
 from datetime import datetime
-from sqlalchemy import Integer, Column, String, DateTime, Boolean
-from sqlalchemy.orm import relation
+from sqlalchemy import Integer, Column, String, DateTime, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
 
 from src.database import Base
 
@@ -34,9 +34,12 @@ class Movie(Base):
     )
     is_only_seoul: bool = Column(
         'is_only_seoul',
-        Boolean,
+        Boolean(),
         nullable = False,
         default = False
     )
-    
-    
+    director = relationship(
+        'Director',
+        secondary = 'movie_directors',
+        back_populates = 'movie'   
+    )
