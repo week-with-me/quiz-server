@@ -4,6 +4,7 @@ from alembic import context
 from src.core import get_settings
 from src.database import Base, engine
 
+from src.model import Movie
 
 config = context.config
 fileConfig(config.config_file_name)
@@ -37,7 +38,7 @@ async def run_migrations_online():
         with context.begin_transaction():
             context.run_migrations()
             
-    async with engine.connection() as connection:
+    async with engine.connect() as connection:
         await connection.run_sync(do_migrations)
 
 
