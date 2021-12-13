@@ -11,7 +11,9 @@ from src.model import (
                     MovieActor,
                     Actor,
                     Genre,
-                    MovieGenre
+                    MovieGenre,
+                    Nation,
+                    MovieNation
                     )
 
 config = context.config
