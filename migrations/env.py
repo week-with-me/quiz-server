@@ -9,7 +9,9 @@ from src.model import (
                     Director,
                     Movie,
                     MovieActor,
-                    Actor
+                    Actor,
+                    Genre,
+                    MovieGenre
                     )
 
 config = context.config

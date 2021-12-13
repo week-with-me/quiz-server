@@ -49,3 +49,8 @@ class Movie(Base):
         secondary = 'movie_actors',
         back_populates = 'movie'
     )
+    genre = relationship(
+        'Genre',
+        secondary = 'movie_genres',
+        back_populates = 'movie'
+    )
