@@ -46,6 +46,6 @@ class Movie(Base):
     )
     actor = relationship(
         'Actor',
-        secondary = 'movie_actor',
+        secondary = 'movie_actors',
         back_populates = 'movie'
     )
