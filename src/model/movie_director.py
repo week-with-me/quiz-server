@@ -7,13 +7,13 @@ from src.database import Base
 class MovieDirector(Base):
     __tablename__ = 'movie_directors'
     
-    director_id: int =  Column(
+    director_id: int = Column(
         'director_id',
         Integer,
         ForeignKey('directors.id'),
         nullable = False
     )
-    movie_cd: int =  Column(
+    movie_cd: int = Column(
         'movie_cd',
         Integer,
         ForeignKey('movies.movie_cd'),

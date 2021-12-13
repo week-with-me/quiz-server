@@ -38,8 +38,14 @@ class Movie(Base):
         nullable = False,
         default = False
     )
+    
     director = relationship(
         'Director',
         secondary = 'movie_directors',
         back_populates = 'movie'   
+    )
+    actor = relationship(
+        'Actor',
+        secondary = 'movie_actor',
+        back_populates = 'movie'
     )
